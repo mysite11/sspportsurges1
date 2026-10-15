@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+  <title>NHL Schedule, Live Streams and TV Guide | Sportsurge</title>
+  <meta name="description" content="See the full NHL schedule with puck-drop times, TV channels, and live stream links for every regular season and playoff game. Watch hockey at Sportsurge.">
+  <link rel="canonical" href="https://sportsurge.pro/NHL/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sportsurge">
+  <meta property="og:title" content="NHL Schedule, Live Streams and TV Guide | Sportsurge">
+  <meta property="og:description" content="See the full NHL schedule with puck-drop times, TV channels, and live stream links for every regular season and playoff game. Watch hockey at Sportsurge.">
+  <meta property="og:url" content="https://sportsurge.pro/NHL/">
+  <meta property="og:image" content="https://sportsurge.pro/logo-512x512.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css?ver=20260925">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://sportsurge.pro/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "NHL",
+        "item": "https://sportsurge.pro/NHL/"
+      }
+    ]
+  }
+  </script>
+  
+  
+
+</head>
+<body>
+<!-- Professional Header -->
+<header class="main-header">
+  <div class="header-inner">
+    <div class="header-left">
+    <a href="/" class="brand">
+      <img src="/logo-512x512.png" alt="Sportsurge" width="32" height="32">
+      <span class="brand-name">Sportsurge</span>
+    </a>
+    <a href="/app-download/" class="app-link" aria-label="Download the Sportsurge App">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" width="16" height="16"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+      <span>App</span>
+    </a>
+    </div>
+    <nav class="nav-desktop" aria-label="Main">
+      <ul class="nav-menu">
+        <li class="menu-item"><a href="/NFL/">NFL</a></li>
+        <li class="menu-item"><a href="/NBA/">NBA</a></li>
+        <li class="menu-item"><a href="/MLB/">MLB</a></li>
+        <li class="menu-item"><a href="/NHL/">NHL</a></li>
+        <li class="menu-item"><a href="/NCAA/">NCAA</a></li>
+        <li class="menu-item"><a href="/Football/">Soccer</a></li>
+        <li class="menu-item"><a href="/UFC/">UFC</a></li>
+        <li class="menu-item"><a href="/WWE/">WWE</a></li>
+        <li class="more-btn"><a href="/Fullschedule/">Schedule &rarr;</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile" hidden>
+    <ul>
+      <li><a href="/NFL/">NFL</a></li>
+      <li><a href="/NBA/">NBA</a></li>
+      <li><a href="/MLB/">MLB</a></li>
+      <li><a href="/NHL/">NHL</a></li>
+      <li><a href="/NCAA/">NCAA</a></li>
+      <li><a href="/Football/">Soccer</a></li>
+      <li><a href="/UFC/">UFC</a></li>
+      <li><a href="/WWE/">WWE</a></li>
+      <li class="more-btn"><a href="/Fullschedule/">Schedule &rarr;</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="site-title-section">
+<h1>Sportsurge NHL Schedule and Live Streams</h1>
+</div>
+<nav class="league-grid" aria-label="Sports schedules">
+  <ul>
+    <li><a href="/NFL/">NFL</a></li>
+    <li><a href="/NBA/">NBA</a></li>
+    <li><a href="/MLB/">MLB</a></li>
+    <li><a href="/NHL/">NHL</a></li>
+    <li><a href="/NCAA/">NCAA</a></li>
+    <li><a href="/Football/">Soccer</a></li>
+    <li><a href="/Premier/">Premier</a></li>
+    <li><a href="/La%20Liga/">La Liga</a></li>
+    <li><a href="/UFC/">UFC</a></li>
+    <li><a href="/MMA/">MMA</a></li>
+    <li><a href="/Boxing/">Boxing</a></li>
+    <li><a href="/WWE/">WWE</a></li>
+    <li><a href="/Fullschedule/">Full Schedule</a></li>
+  </ul>
+</nav>
+
+
+	
+
+  <!-- Loading Spinner -->
+  <div id="loading">
+    <div class="spinner"></div>
+    <p>Loading Matches...</p>
+  </div>
+
+	<!-- Filter Buttons -->
+<div class="filter-buttons">
+  <button id="all-btn" class="filter-btn active">All</button>
+  <button id="live-btn" class="filter-btn live">Live <span id="live-count">0</span></button>
+  <button id="upcoming-btn" class="filter-btn">Upcoming</button>
+</div>
+
+  <!-- Matches Table -->
+  <table id="matches-table">
+    <thead>
+        <tr>
+          <th>Time</th>
+          <th>Sport</th>
+          <th>Tournament</th>
+          <th>Match</th>
+          <th>Watch</th>
+        </tr>
+      </thead>
+    <tbody id="matches-body"></tbody>
+  </table>
+
+<div class="contentsection">
+
+<p>The <strong>NHL schedule</strong> brings 82 regular-season games per team, the Stanley Cup Playoffs, and the outdoor classics that hockey fans plan their week around. Sportsurge keeps every <strong>NHL live stream</strong> option, puck-drop time, and TV listing in one place so you never miss your club&rsquo;s next matchup.</p>
+
+<h2>NHL Schedule and TV Guide</h2>
+<p>Find <strong>tonight&rsquo;s NHL games</strong> with start times in your timezone, national and regional broadcasters, and a Watch link when a stream is available. Coverage typically includes ESPN, TNT, ABC, NHL Network, and regional sports networks for local markets.</p>
+<ul>
+<li><strong>Regular season</strong> &ndash; October through April, with daily game windows</li>
+<li><strong>NHL outdoor games</strong> &ndash; the Winter Classic and Stadium Series</li>
+<li><strong>Stanley Cup Playoffs</strong> &ndash; four rounds, best of seven</li>
+<li><strong>Stanley Cup Final</strong> &ndash; hockey&rsquo;s championship series</li>
+</ul>
+<p>Use the <a href="/Fullschedule/">full sports schedule</a> to see NHL games alongside other leagues on the same day.</p>
+
+<h2>How to Watch NHL Games</h2>
+<p>Options depend on your market. National games rotate across ESPN, TNT, and ABC; most regular-season matchups stay on regional sports networks. The table above updates throughout the day with available matchups for the NHL, including preseason, regular season, and playoff rounds.</p>
+<ol>
+<li>Open the schedule table and find your game</li>
+<li>Check the listed time and broadcast channel</li>
+<li>Use the Watch link when a stream is listed</li>
+</ol>
+
+<h2>NHL Teams and Divisions</h2>
+<p>The league has 32 clubs across the Eastern and Western Conferences. Popular playoff contenders and original-six programs include the <strong>Boston Bruins</strong>, <strong>Toronto Maple Leafs</strong>, <strong>Montreal Canadiens</strong>, <strong>Chicago Blackhawks</strong>, <strong>Detroit Red Wings</strong>, <strong>New York Rangers</strong>, <strong>Pittsburgh Penguins</strong>, <strong>Washington Capitals</strong>, <strong>Colorado Avalanche</strong>, <strong>Vegas Golden Knights</strong>, <strong>Edmonton Oilers</strong>, and <strong>Carolina Hurricanes</strong>.</p>
+
+<h2>Related Schedules</h2>
+<p>Explore <a href="/NFL/">NFL</a>, <a href="/NBA/">NBA</a>, <a href="/MLB/">MLB</a>, and <a href="/Football/">soccer</a> schedules when hockey is in the off-season, or jump to <a href="/Fullschedule/">today&rsquo;s full schedule</a> for every league.</p>
+
+</div>	
+
+  
+
+  <script src="script.js?ver=20260925"></script>
+  <script src="/script.js?ver=20260925"></script>
+
+<!-- Footer -->
+<footer>
+  <!-- Disclaimer Section -->
+  <div class="disclaimer-box">
+    <h3>Disclaimer</h3>
+    <p>
+      We do not host or own any media content; all streams are sourced from 
+      third-party sites. We do not take any responsibility for copyright issues. 
+      Copyright concerns should be directed to the original host. We have no 
+      control over ads in embedded players and receive no revenue from them. 
+      <a href="/Disclaimer/">Learn More!</a>
+    </p>
+  </div>
+
+  <ul class="footer-menu">
+    <li><a href="/">Home</a></li>
+    <li><a href="/About/">About</a></li>
+    <li><a href="/Terms/">Terms</a></li>
+    <li><a href="/Privacy/">Privacy</a></li>
+	  <li><a href="/Disclaimer/">Disclaimer</a></li>
+	  <li><a href="/DMCA/">DMCA</a></li>
+	  <li><a href="/Contact/">Contact Us</a></li>
+  </ul>
+  <p>© 2026 Sportsurge.pro. All rights reserved.</p>
+  </footer>
+
+
+
+<script data-cfasync="false" src="https://capitalhospitals.org/1/d85ea6c25d4f57f87aae565a82dfac26"></script>
+
+</body>
+
+</html>
+

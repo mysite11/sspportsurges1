@@ -1,0 +1,23 @@
+﻿# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.suo
+
+# Temp files
+*.log
+*.tmp
+
+# Secrets / local notes — never upload
+github-details.txt
+
+# Custom domain file — never upload
+CNAME
+

@@ -1,4 +1,4 @@
-const apiURL = "https://streamed.pk/api/matches/all";
+const apiURL = "https://api.reedstreams.link/api/matches/all";
 const matchesBody = document.getElementById("matches-body");
 const matchesTable = document.getElementById("matches-table");
 const loadingDiv = document.getElementById("loading");
@@ -70,19 +70,21 @@ fetch(apiURL)
     let liveCount = 0;
 
     matches.forEach(match => {
-      const matchTime = match.date;
-      const diffMinutes = (Date.now() - matchTime) / 60000;
+      const matchTime = Number(match.date);
+      const endTime = Number(match.ends_at) || matchTime + 150 * 60 * 1000;
+      const now = Date.now();
 
       const titleMatch = match.title && match.title.toLowerCase().includes(keyword.toLowerCase());
       const slugMatch = targetSlug && match.category === targetSlug;
 
       if (!titleMatch && !slugMatch) return;
 
-      if (diffMinutes >= 180) return;
+      // Hide events that finished more than 3 hours ago.
+      if (now - endTime >= 180 * 60 * 1000) return;
 
       let status = "";
-      if (diffMinutes >= 150) status = "finished";
-      else if (diffMinutes >= 0 && diffMinutes < 150) {
+      if (now >= endTime) status = "finished";
+      else if (now >= matchTime) {
         status = "live";
         liveCount++;
       } else {
@@ -92,10 +94,10 @@ fetch(apiURL)
       allMatches.push({
         time: formatTime(matchTime),
         sport: getCategoryName(match.category) || "-",
-        tournament: "",
+        tournament: match.league_name || "",
         match: match.title || "-",
         status,
-        url: `https://raaj648.github.io/streampage2sportsurge/?id=${match.id}`,
+        url: `https://raaj648.github.io/streampage2sportsurge/?id=${encodeURIComponent(match.id)}`,
         isTitleMatch: !!titleMatch
       });
     });

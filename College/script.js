@@ -1,4 +1,4 @@
-const apiURL = "https://streamed.pk/api/matches/all";
+const apiURL = "https://api.reedstreams.link/api/matches/all";
 const matchesBody = document.getElementById("matches-body");
 const matchesTable = document.getElementById("matches-table");
 const loadingDiv = document.getElementById("loading");
@@ -92,10 +92,10 @@ fetch(apiURL)
       allMatches.push({
         time: formatTime(matchTime),
         sport: getCategoryName(match.category) || "-",
-        tournament: "",
+        tournament: match.league_name || "",
         match: match.title || "-",
         status,
-        url: `https://raaj648.github.io/streampage2sportsurge/?id=${match.id}`,
+        url: `https://raaj648.github.io/streampage2sportsurge/?id=${encodeURIComponent(match.id)}`,
         isTitleMatch: !!titleMatch
       });
     });

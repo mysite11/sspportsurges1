@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sportsurges.pro/sitemap.xml
+Sitemap: https://sportssurges.pro/sitemap.xml
